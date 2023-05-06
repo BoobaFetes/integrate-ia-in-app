@@ -1,3 +1,4 @@
+import { iaHandler } from '@boobafetes/ia-handler';
 import { Link, Route, Routes } from 'react-router-dom';
 
 export function App() {
@@ -11,6 +12,9 @@ export function App() {
           <li>
             <Link to="/page-2">Page 2</Link>
           </li>
+          <li>
+            <Link to="/ia-handler">IA handler</Link>
+          </li>
         </ul>
       </div>
       <Routes>
@@ -20,6 +24,7 @@ export function App() {
             <div>
               This is the generated root route.{' '}
               <Link to="/page-2">Click here for page 2.</Link>
+              <Link to="/ia-handler">go to ia handler demo.</Link>
             </div>
           }
         />
@@ -28,6 +33,22 @@ export function App() {
           element={
             <div>
               <Link to="/">Click here to go back to root page.</Link>
+            </div>
+          }
+        />
+        <Route
+          path="/ia-handler"
+          element={
+            <div>
+              <div>
+                <Link to="/">Click here to go back to root page.</Link>
+              </div>
+              <div>
+                <p>
+                  <label>ia handler says :</label>
+                </p>
+                <p>{iaHandler()}</p>
+              </div>
             </div>
           }
         />

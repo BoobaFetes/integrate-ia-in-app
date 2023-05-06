@@ -2,7 +2,9 @@
   "name": "boobafetes",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve converter"
+  },
   "private": true,
   "dependencies": {
     "@swc/helpers": "~0.5.0",
